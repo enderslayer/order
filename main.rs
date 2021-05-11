@@ -1,12 +1,13 @@
-use std::env;
-use std::env::args;
 use std::fs::File;
 use std::io::{Result, BufReader, BufRead};
+use std::env;
+use std::env::args;
 
 fn main() {
     let mut reverse = false;
     let mut arguments: Vec<String> = env::args().collect();
     
+
     if arguments[1].contains("-r"){
         &arguments.remove(1);
         reverse = true;
